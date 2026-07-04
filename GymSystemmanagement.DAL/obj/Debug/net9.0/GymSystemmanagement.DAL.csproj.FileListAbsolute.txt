@@ -1,0 +1,15 @@
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\bin\Debug\net9.0\GymSystemmanagement.DAL.deps.json
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\bin\Debug\net9.0\GymSystemmanagement.DAL.dll
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\bin\Debug\net9.0\GymSystemmanagement.DAL.pdb
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\obj\Debug\net9.0\GymSystemmanagement.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\obj\Debug\net9.0\GymSystemmanagement.DAL.AssemblyInfoInputs.cache
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\obj\Debug\net9.0\GymSystemmanagement.DAL.AssemblyInfo.cs
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\obj\Debug\net9.0\GymSystemmanagement.DAL.csproj.CoreCompileInputs.cache
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\obj\Debug\net9.0\GymSystemmanagement.DAL.sourcelink.json
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\obj\Debug\net9.0\GymSystemmanagement.DAL.dll
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\obj\Debug\net9.0\refint\GymSystemmanagement.DAL.dll
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\obj\Debug\net9.0\GymSystemmanagement.DAL.pdb
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\obj\Debug\net9.0\ref\GymSystemmanagement.DAL.dll
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\bin\Debug\net9.0\GymSystemmanagement.DAL.runtimeconfig.json
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\obj\Debug\net9.0\GymSystemmanagement.DAL.csproj.AssemblyReference.cache
+C:\C#-Assignment\GymSystemManagement\GymSystemmanagement.DAL\obj\Debug\net9.0\GymSystemmanagement.DAL.genruntimeconfig.cache
