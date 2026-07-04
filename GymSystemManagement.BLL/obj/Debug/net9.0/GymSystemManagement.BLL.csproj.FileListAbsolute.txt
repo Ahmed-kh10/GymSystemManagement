@@ -1,0 +1,16 @@
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\bin\Debug\net9.0\GymSystemManagement.BLL.deps.json
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\bin\Debug\net9.0\GymSystemManagement.BLL.dll
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\bin\Debug\net9.0\GymSystemManagement.BLL.pdb
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\bin\Debug\net9.0\GymSystemmanagement.DAL.dll
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\bin\Debug\net9.0\GymSystemmanagement.DAL.pdb
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\obj\Debug\net9.0\GymSystemManagement.BLL.csproj.AssemblyReference.cache
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\obj\Debug\net9.0\GymSystemManagement.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\obj\Debug\net9.0\GymSystemManagement.BLL.AssemblyInfoInputs.cache
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\obj\Debug\net9.0\GymSystemManagement.BLL.AssemblyInfo.cs
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\obj\Debug\net9.0\GymSystemManagement.BLL.csproj.CoreCompileInputs.cache
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\obj\Debug\net9.0\GymSystemManagement.BLL.sourcelink.json
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\obj\Debug\net9.0\GymSyste.BC5CD7DD.Up2Date
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\obj\Debug\net9.0\GymSystemManagement.BLL.dll
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\obj\Debug\net9.0\refint\GymSystemManagement.BLL.dll
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\obj\Debug\net9.0\GymSystemManagement.BLL.pdb
+C:\C#-Assignment\GymSystemManagement\GymSystemManagement.BLL\obj\Debug\net9.0\ref\GymSystemManagement.BLL.dll
