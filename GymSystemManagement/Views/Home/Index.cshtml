@@ -1,0 +1,299 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="row align-items-center">
+    <div class="col-lg-7 col-md-6 col-12">
+        <div class="info mt-4">
+            <header class="text-black-alternative">
+                <h2 class="fw-bolder display-2 mb-4">
+                    Your body can
+                    <span class="text-primary-color">stand almost</span> anything
+                </h2>
+
+                <p class="mb-4">
+                    It's your mind that needs convincing. Push past your limits,
+                    stay committed, and watch as your body transform into powerhouse
+                    of strength and resilience.
+                </p>
+            </header>
+
+            <div class="stats-bar">
+                <div class="row g-3">
+                    <div class="col-4">
+                        <div class="stat text-center">
+                            <span class="fw-bolder fs-5 d-block">100</span>
+                            <h3 class="fs-6 fw-normal">Total Members</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="stat text-center">
+                            <span class="fw-bolder fs-5 d-block">85</span>
+                            <h3 class="fs-6 fw-normal">Active Members</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="stat text-center">
+                            <span class="fw-bolder fs-5 d-block">20</span>
+                            <h3 class="fs-6 fw-normal">Trainers</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="stat text-center">
+                            <span class="fw-bolder fs-5 d-block">3</span>
+                            <h3 class="fs-6 fw-normal">Upcoming Sessions</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="stat text-center">
+                            <span class="fw-bolder fs-5 d-block">5</span>
+                            <h3 class="fs-6 fw-normal">Ongoing Sessions</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="stat text-center">
+                            <span class="fw-bolder fs-5 d-block">20</span>
+                            <h3 class="fs-6 fw-normal">Completed Sessions</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons my-4">
+                <button class="btn bg-primary-color text-white rounded-pill px-4 py-2 me-3">
+                    Get Started
+                </button>
+
+                <button class="btn border-primary-color rounded-pill px-4 py-2 text-primary-color">
+                    Explore More
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-5 col-md-6 col-12 text-center">
+        <div class="character">
+            <img src="~/images/Theo Vance.jpg"
+                 alt="Theo Vance"
+                 class="img-fluid" />
+        </div>
+    </div>
+</div>
+
+<div class="bar bg-primary-color d-flex py-4 text-white fw-bolder align-items-center mt-5">
+    <p class="py-0 my-0 overflow-hidden text-nowrap">
+        outdoor & online trainers
+        <img src="~/images/star.svg" alt="star icon" />
+        personal training
+        <img src="~/images/star.svg" alt="star icon" />
+        live classes
+        <img src="~/images/star.svg" alt="star icon" />
+        personal trainers
+        <img src="~/images/star.svg" alt="star icon" />
+        personal training
+    </p>
+</div>
+
+<section class="about my-5 text-black-alternative">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+
+            <div class="col-lg-6 col-12">
+                <div class="characters position-relative">
+                    <div class="image mb-3">
+                        <img src="~/images/about p1.jpg" class="img-fluid rounded" alt="person" />
+                    </div>
+
+                    <div class="image position-absolute top-0 end-0 d-none d-lg-block">
+                        <img src="~/images/about p2.jpg" class="img-fluid rounded" alt="person" />
+                    </div>
+
+                    <div class="image position-absolute bottom-0 start-0 d-none d-lg-block">
+                        <img src="~/images/about p3.jpg" class="img-fluid rounded" alt="person" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <div class="title d-flex align-items-center gap-2 mb-3">
+                    <img src="~/images/dumbbell.jpg" alt="dumbbell icon" />
+                    <h2 class="text-primary-color fs-5">About Us</h2>
+                </div>
+
+                <header>
+                    <p class="fw-bolder display-6 mb-4">
+                        EMPOWERING YOU TO ACHIEVE
+                        <span class="text-primary-color">YOUR FITNESS</span> GOALS
+                    </p>
+
+                    <p>
+                        We believe fitness is more than just a workout—it's a lifestyle.
+                        With top-of-the-line facilities, certified trainers, and a supportive
+                        community.
+                    </p>
+                </header>
+
+                <div class="features mt-4">
+                    <div class="row row-cols-1 row-cols-sm-2 g-4">
+
+                        @for (int i = 0; i < 4; i++)
+                        {
+                            <div class="feature">
+                                <div class="inner">
+                                    <div class="title d-flex gap-2 mb-2">
+                                        <img src="~/images/feature icon.jpg" alt="icon" />
+                                        <h3 class="fw-bold fs-6">Personal Trainer</h3>
+                                    </div>
+                                    <div class="info">
+                                        <p>Achieve your fitness goals with certified trainers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+
+                    <button class="btn bg-primary-color rounded-pill text-white px-4 py-2 mt-4">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="workout py-5">
+    <div class="container">
+        <div class="title text-center mb-5">
+            <h2>WORKOUTS</h2>
+            <p class="text-white fw-bolder fs-2">
+                Transform Your Body with Our Dynamic Upcoming Workouts
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="card h-100">
+                    <img src="~/images/workout 1.jpg" class="card-img-top" alt="workout" />
+                    <div class="card-footer bg-white">
+                        <h5 class="fw-bolder">Group Workout</h5>
+                        <a href="#">Explore</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100">
+                    <img src="~/images/workout 2.jpg" class="card-img-top" alt="workout" />
+                    <div class="card-footer bg-white">
+                        <h5 class="fw-bolder">Strength Training</h5>
+                        <a href="#">Explore</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100">
+                    <img src="~/images/workout 3.jpg" class="card-img-top" alt="workout" />
+                    <div class="card-footer bg-white">
+                        <h5 class="fw-bolder">Cardio Session</h5>
+                        <a href="#">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-us my-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+                <div class="title d-flex gap-2 mb-3">
+                    <img src="~/images/dumbbell.jpg" alt="dumbbell icon" />
+                    <h2 class="text-primary-color fs-5">Why Us</h2>
+                </div>
+
+                <header>
+                    <p class="fw-bolder display-5 mb-4">
+                        Elevate fitness with
+                        <span class="text-primary-color">the best</span> way possible
+                    </p>
+                </header>
+
+                <ul class="list-unstyled mt-4">
+                    @for (int i = 1; i <= 3; i++)
+                    {
+                        <li class="d-flex gap-4 mb-4">
+                            <div class="count fw-bold">0@(i)</div>
+                            <div>
+                                <h3 class="fw-bold fs-5">Personalized fitness plans</h3>
+                                <p>
+                                    We tailor every workout to fit your unique goals and fitness level.
+                                </p>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+            <div class="col-lg-6 d-none d-lg-block text-center">
+                <img src="~/images/why us images.svg"
+                     alt="characters"
+                     class="img-fluid" />
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="mt-5">
+    <div class="bar bg-primary-color d-flex py-4 text-white fw-bolder align-items-center">
+        <p class="py-0 my-0 overflow-hidden text-nowrap">
+            outdoor & online trainers
+            <img src="~/images/star.svg" alt="star icon" />
+            personal training
+            <img src="~/images/star.svg" alt="star icon" />
+            live classes
+            <img src="~/images/star.svg" alt="star icon" />
+            personal trainers
+        </p>
+    </div>
+
+    <div class="footer-content my-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+
+                <div>
+                    <img src="~/images/logo.jpg" alt="logo" class="img-fluid mb-2" />
+                    <p>Push harder, go further. Your fitness journey starts today!</p>
+                </div>
+
+                <div>
+                    <h4>Contact Us</h4>
+                    <p>+91 123 456 789</p>
+                    <p>info@gmail.com</p>
+                </div>
+
+                <div>
+                    <h4>Gym Timing</h4>
+                    <p>Mon - Fri : 08:00 AM - 10:00 PM</p>
+                    <p>Sat - Sun : 08:00 AM - 09:00 PM</p>
+                </div>
+
+                <div>
+                    <h4>Location</h4>
+                    <p>2715 Ash Dr. San Jose, South Dakota 83475</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>

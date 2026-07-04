@@ -1,0 +1,151 @@
+﻿@model MemberCreateVM
+@{
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <main role="main" class="pb-3">
+
+        <header class="mb-4">
+            <h3 class="text-primary-color">Add Member</h3>
+        </header>
+
+        <form asp-controller="Members" asp-action="Create" method="post">
+
+            <ul class="nav nav-tabs mb-4" id="addMemberTabs" role="tablist">
+                <li class="nav-item">
+                    <button class="nav-link active"
+                            id="member-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#member-info"
+                            type="button">
+                        Member Info
+                    </button>
+                </li>
+
+                <li class="nav-item">
+                    <button class="nav-link"
+                            id="health-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#health-info"
+                            type="button">
+                        Health Data
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+
+                <!-- Member Info -->
+                <div class="tab-pane fade show active" id="member-info">
+                    <div class="section-header mb-3">
+                        <h5 class="text-primary fw-bold">Personal Information</h5>
+                        <hr />
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label>Name</label>
+                            <input asp-for="Name" class="form-control" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Email</label>
+                            <input asp-for="Email" class="form-control" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Phone</label>
+                            <input asp-for="Phone" class="form-control" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Date Of Birth</label>
+                            <input asp-for="DateOfBirth" type="date" class="form-control" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Gender</label>
+                            <select asp-for="Gender" class="form-select">
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="section-header mb-3 mt-4">
+                        <h5 class="text-primary fw-bold">Address Information</h5>
+                        <hr />
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label>Building Number</label>
+                            <input asp-for="BuildingNumber" class="form-control" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Street</label>
+                            <input asp-for="Street" class="form-control" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>City</label>
+                            <input asp-for="City" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health -->
+                <div class="tab-pane fade" id="health-info">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label>Height</label>
+                            <input asp-for="Height" class="form-control" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Weight</label>
+                            <input asp-for="Weight" class="form-control" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Blood Type</label>
+                            <select asp-for="BloodType" class="form-select">
+                                <option value="">Select</option>
+                                <option>A+</option>
+                                <option>A-</option>
+                                <option>B+</option>
+                                <option>B-</option>
+                                <option>O+</option>
+                                <option>O-</option>
+                                <option>AB+</option>
+                                <option>AB-</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Note</label>
+                            <input asp-for="Note" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="d-flex justify-content-end gap-3 mt-4">
+                <a asp-controller="Members"
+                   asp-action="Index"
+                   class="btn btn-outline-secondary px-4">
+                    Back To List
+                </a>
+
+                <button type="submit" class="btn btn-primary px-4">
+                    Add
+                </button>
+            </footer>
+
+        </form>
+
+    </main>
+</div>
