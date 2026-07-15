@@ -1,5 +1,6 @@
-﻿using GymSystemmanagement.DAL.Models.Enums;
+﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
+using GymSystemmanagement.DAL.Models.Enums;
 
 public class MemberCreateVM
 {
@@ -23,5 +24,8 @@ public class MemberCreateVM
     public decimal Weight { get; set; }
     public string BloodType { get; set; }
     public string Note { get; set; }
-    public string? Photo { get; set; }
+
+    public IFormFile? Photo { get; set; }
+
+    public string? CurrentPhoto { get; set; }
 }

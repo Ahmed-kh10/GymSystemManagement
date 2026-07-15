@@ -3,10 +3,18 @@
 public interface IUnitOfWork
 {
     IMemberRepository Members { get; }
+
     ITrainerRepository Trainers { get; }
+
     IPlanRepository Plans { get; }
+
     ISessionRepository Sessions { get; }
+
     ICategoryRepository Categories { get; }
+
+    IMembershipRepository MemberShips { get; }
+
+    IBookingRepository Bookings { get; }
 
     Task SaveAsync();
 }

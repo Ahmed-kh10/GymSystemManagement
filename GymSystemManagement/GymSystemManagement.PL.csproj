@@ -11,4 +11,12 @@
     <ProjectReference Include="..\GymSystemmanagement.DAL\GymSystemmanagement.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Files\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.3.11" />
+  </ItemGroup>
+
 </Project>

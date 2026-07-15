@@ -1,12 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
+[Authorize]
 public class MembersController : Controller
 {
     private readonly IMemberService _service;
+    private readonly IAttachmentService _attachmentService;
 
-    public MembersController(IMemberService service)
+    public MembersController(
+        IMemberService service,
+        IAttachmentService attachmentService)
     {
         _service = service;
+        _attachmentService = attachmentService;
     }
 
     public async Task<IActionResult> Index()
@@ -43,6 +49,11 @@ public class MembersController : Controller
                 return View(vm);
             }
 
+            if (vm.Photo != null)
+            {
+                vm.CurrentPhoto = await _attachmentService.UploadAsync(vm.Photo, "Members");
+            }
+
             Console.WriteLine("BEFORE SAVE");
 
             await _service.CreateAsync(vm);
@@ -50,6 +61,7 @@ public class MembersController : Controller
             Console.WriteLine("AFTER SAVE");
 
             TempData["Success"] = "Created Successfully";
+
             return RedirectToAction(nameof(Index));
         }
         catch (Exception ex)
@@ -80,7 +92,8 @@ public class MembersController : Controller
             Height = member.Healthrecord?.Height ?? 0,
             Weight = member.Healthrecord?.weight ?? 0,
             BloodType = member.Healthrecord?.BloodType,
-            Note = member.Healthrecord?.Note
+            Note = member.Healthrecord?.Note,
+            CurrentPhoto = member.Photo
         };
 
         return View(vm);
@@ -93,9 +106,17 @@ public class MembersController : Controller
         if (!ModelState.IsValid)
             return View(vm);
 
+        if (vm.Photo != null)
+        {
+            _attachmentService.Delete(vm.CurrentPhoto, "Members");
+
+            vm.CurrentPhoto = await _attachmentService.UploadAsync(vm.Photo, "Members");
+        }
+
         await _service.UpdateAsync(vm.Id, vm);
 
         TempData["Success"] = "Updated Successfully";
+
         return RedirectToAction(nameof(Index));
     }
 

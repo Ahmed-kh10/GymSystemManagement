@@ -1,29 +1,51 @@
 using GymSystemManagement.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace GymSystemManagement.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IMemberService _memberService;
+        private readonly ITrainerService _trainerService;
+        private readonly ISessionService _sessionService;
 
-        public HomeController(ILogger<HomeController> logger, IMemberService memberService)
+        public HomeController(
+            ILogger<HomeController> logger,
+            IMemberService memberService,
+            ITrainerService trainerService,
+            ISessionService sessionService)
         {
             _logger = logger;
             _memberService = memberService;
+            _trainerService = trainerService;
+            _sessionService = sessionService;
         }
 
         public async Task<IActionResult> Index()
         {
             var members = await _memberService.GetAllAsync();
+            var trainers = await _trainerService.GetAllAsync();
+
             ViewBag.TotalMembers = members.Count;
-            ViewBag.ActiveMembers = 0;
-            ViewBag.TotalTrainers = 0;
-            ViewBag.UpcomingSessions = 0;
-            ViewBag.OngoingSessions = 0;
-            ViewBag.CompletedSessions = 0;
+
+            ViewBag.ActiveMembers = members.Count; 
+
+            ViewBag.TotalTrainers = trainers.Count;
+
+            ViewBag.UpcomingSessions =
+                await _sessionService.GetUpcomingCountAsync();
+
+            ViewBag.OngoingSessions =
+                await _sessionService.GetOngoingCountAsync();
+
+            ViewBag.CompletedSessions =
+                await _sessionService.GetCompletedCountAsync();
+
             return View();
         }
 

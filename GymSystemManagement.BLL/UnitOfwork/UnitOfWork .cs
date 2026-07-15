@@ -1,31 +1,45 @@
-﻿using GymSystemManagement.Repositories;
-using GymSystemmanagement.DAL.Data;
+﻿using GymSystemmanagement.DAL.Data;
+using GymSystemmanagement.DAL.Models;
+using GymSystemManagement.Repositories;
 
 public class UnitOfWork : IUnitOfWork
 {
     private readonly GymSystemManagementDbContext _context;
 
     public IMemberRepository Members { get; }
+
     public ITrainerRepository Trainers { get; }
+
     public IPlanRepository Plans { get; }
+
     public ISessionRepository Sessions { get; }
+
     public ICategoryRepository Categories { get; }
 
+    public IMembershipRepository MemberShips { get; }
+
+    public IBookingRepository Bookings { get; }
+
+
     public UnitOfWork(
-        GymSystemManagementDbContext context,
-        IMemberRepository memberRepository,
-        ITrainerRepository trainerRepository,
-        IPlanRepository planRepository,
-        ISessionRepository sessionRepository,
-        ICategoryRepository categoryRepository)
+     GymSystemManagementDbContext context,
+     IMemberRepository members,
+     ITrainerRepository trainers,
+     IPlanRepository plans,
+     ISessionRepository sessions,
+     ICategoryRepository categories,
+     IMembershipRepository memberShips,
+     IBookingRepository bookings)
     {
         _context = context;
 
-        Members = memberRepository;
-        Trainers = trainerRepository;
-        Plans = planRepository;
-        Sessions = sessionRepository;
-        Categories = categoryRepository;
+        Members = members;
+        Trainers = trainers;
+        Plans = plans;
+        Sessions = sessions;
+        Categories = categories;
+        MemberShips = memberShips;
+        Bookings = bookings;
     }
 
     public async Task SaveAsync()

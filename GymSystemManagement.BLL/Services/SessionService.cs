@@ -101,4 +101,26 @@ public class SessionService : ISessionService
         await _unit.Sessions.DeleteAsync(id);
         await _unit.SaveAsync();
     }
+    public async Task<int> GetUpcomingCountAsync()
+    {
+        var sessions = await _unit.Sessions.GetAllAsync();
+
+        return sessions.Count(s => s.StartDate > DateTime.Now);
+    }
+
+    public async Task<int> GetOngoingCountAsync()
+    {
+        var sessions = await _unit.Sessions.GetAllAsync();
+
+        return sessions.Count(s =>
+            s.StartDate <= DateTime.Now &&
+            s.EndDate >= DateTime.Now);
+    }
+
+    public async Task<int> GetCompletedCountAsync()
+    {
+        var sessions = await _unit.Sessions.GetAllAsync();
+
+        return sessions.Count(s => s.EndDate < DateTime.Now);
+    }
 }

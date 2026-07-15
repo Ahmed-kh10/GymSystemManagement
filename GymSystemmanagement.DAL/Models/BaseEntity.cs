@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GymSystemmanagement.DAL.Models
+﻿namespace GymSystemmanagement.DAL.Models
 {
     public class BaseEntity
     {

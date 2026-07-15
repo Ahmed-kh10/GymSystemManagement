@@ -1,9 +1,12 @@
 ﻿using GymSystemmanagement.DAL.Models;
 using GymSystemManagement.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace GymSystemManagement.PL.Controllers
 {
+[Authorize]
     public class PlanController : Controller
     {
         private readonly IPlanService _service;

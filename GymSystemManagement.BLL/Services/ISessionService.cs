@@ -7,4 +7,7 @@ public interface ISessionService
     Task CreateAsync(SessionCreateVM vm);
     Task UpdateAsync(int id, SessionEditVM vm);
     Task DeleteAsync(int id);
+    Task<int> GetUpcomingCountAsync();
+    Task<int> GetOngoingCountAsync();
+    Task<int> GetCompletedCountAsync();
 }

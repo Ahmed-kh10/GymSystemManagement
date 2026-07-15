@@ -26,7 +26,7 @@ public class MemberService : IMemberService
             Name = vm.Name,
             Email = vm.Email,
             Phone = vm.Phone,
-            Photo = vm.Photo,
+            Photo = vm.CurrentPhoto,
             DateOfBirth = vm.DateOfBirth,
             Gender = vm.Gender,
 
@@ -69,6 +69,8 @@ public class MemberService : IMemberService
         member.DateOfBirth = vm.DateOfBirth;
         member.Gender = vm.Gender;
 
+        member.Photo = vm.CurrentPhoto;
+
         member.Address.City = vm.City;
         member.Address.street = vm.Street;
         member.Address.Building = vm.BuildingNumber;
@@ -88,12 +90,22 @@ public class MemberService : IMemberService
         if (member == null)
             throw new Exception("Member Not Found");
 
+        member.Name = vm.Name;
         member.Email = vm.Email;
         member.Phone = vm.Phone;
+        member.DateOfBirth = vm.DateOfBirth;
+        member.Gender = vm.Gender;
+
+        member.Photo = vm.CurrentPhoto;
 
         member.Address.City = vm.City;
         member.Address.street = vm.Street;
         member.Address.Building = vm.BuildingNumber;
+
+        member.Healthrecord.Height = vm.Height;
+        member.Healthrecord.weight = vm.Weight;
+        member.Healthrecord.BloodType = vm.BloodType;
+        member.Healthrecord.Note = vm.Note;
 
         await _unit.SaveAsync();
     }

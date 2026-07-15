@@ -1,4 +1,5 @@
 ﻿using GymSystemmanagement.DAL.Models.Enums;
+using Microsoft.AspNetCore.Http;
 
 public class MemberEditVM
 {
@@ -20,5 +21,7 @@ public class MemberEditVM
     public string BloodType { get; set; }
     public string? Note { get; set; }
 
-    public string? Photo { get; set; }  
+    public string? CurrentPhoto { get; set; }
+
+    public IFormFile? Photo { get; set; }
 }

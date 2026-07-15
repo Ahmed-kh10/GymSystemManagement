@@ -1,0 +1,77 @@
+﻿@model GymSystemManagement.BLL.ViewModels.Bookings.CreateBookingDataVM
+
+@{
+    ViewData["Title"] = "Create Booking";
+}
+
+<h2>Create Booking</h2>
+
+<hr />
+
+<div class="row justify-content-center">
+
+    <div class="col-md-6">
+
+        <div class="card shadow">
+
+            <div class="card-header">
+                <h5 class="mb-0">Booking Information</h5>
+            </div>
+            <div class="card-body">
+
+                <form asp-action="Create" method="post">
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <input asp-for="Booking.SessionId" type="hidden" />
+
+                    <div class="mb-3">
+
+                        <label asp-for="Booking.MemberId" class="form-label"></label>
+
+                        <select asp-for="Booking.MemberId"
+                                asp-items="Model.Members"
+                                class="form-select">
+
+                            <option value="">-- Select Member --</option>
+
+                        </select>
+
+                        <span asp-validation-for="Booking.MemberId" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="mt-3">
+
+                        <button type="submit" class="btn btn-primary">
+
+                            <i class="fas fa-save"></i>
+
+                            Create Booking
+
+                        </button>
+
+                        <a asp-action="GetMembersForUpcomingSession"
+                           asp-route-id="@Model.Booking.SessionId"
+                           class="btn btn-secondary">
+
+                            Back
+
+                        </a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

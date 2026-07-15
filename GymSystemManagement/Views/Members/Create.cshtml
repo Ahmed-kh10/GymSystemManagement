@@ -10,7 +10,10 @@
             <h3 class="text-primary-color">Add Member</h3>
         </header>
 
-        <form asp-controller="Members" asp-action="Create" method="post">
+        <form asp-controller="Members"
+              asp-action="Create"
+              method="post"
+              enctype="multipart/form-data">
 
             <ul class="nav nav-tabs mb-4" id="addMemberTabs" role="tablist">
                 <li class="nav-item">
@@ -44,34 +47,50 @@
                     </div>
 
                     <div class="row g-3">
+
                         <div class="col-md-6">
-                            <label>Name</label>
+                            <label asp-for="Name" class="form-label">Name</label>
                             <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
 
                         <div class="col-md-6">
-                            <label>Email</label>
+                            <label asp-for="Email" class="form-label">Email</label>
                             <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
 
                         <div class="col-md-6">
-                            <label>Phone</label>
+                            <label asp-for="Phone" class="form-label">Phone</label>
                             <input asp-for="Phone" class="form-control" />
+                            <span asp-validation-for="Phone" class="text-danger"></span>
                         </div>
 
                         <div class="col-md-6">
-                            <label>Date Of Birth</label>
+                            <label asp-for="DateOfBirth" class="form-label">Date Of Birth</label>
                             <input asp-for="DateOfBirth" type="date" class="form-control" />
+                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
                         </div>
 
                         <div class="col-md-6">
-                            <label>Gender</label>
+                            <label asp-for="Gender" class="form-label">Gender</label>
                             <select asp-for="Gender" class="form-select">
                                 <option value="">Select Gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
                         </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Photo" class="form-label">Profile Photo</label>
+                            <input asp-for="Photo"
+                                   type="file"
+                                   class="form-control"
+                                   accept=".jpg,.jpeg,.png" />
+                            <span asp-validation-for="Photo" class="text-danger"></span>
+                        </div>
+
                     </div>
 
                     <div class="section-header mb-3 mt-4">

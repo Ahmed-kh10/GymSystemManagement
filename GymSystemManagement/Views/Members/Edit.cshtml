@@ -13,10 +13,19 @@
                         <div class="card-body text-center">
 
                             <div class="text-center mt-3">
-                                <img src="~/images/@Model.Photo"
+                                <img src="~/Images/Members/@Model.CurrentPhoto"
                                      alt="@Model.Name"
                                      class="rounded-circle"
-                                     style="width: 120px; height: 120px; object-fit: cover; border: 3px solid #fff; margin-top: -60px;" />
+                                     style="width:120px;height:120px;object-fit:cover;border:3px solid #fff;margin-top:-60px;" />
+                            </div>
+
+                            <div class="mt-3">
+                                <label asp-for="Photo" class="form-label">Change Photo</label>
+                                <input asp-for="Photo"
+                                       type="file"
+                                       class="form-control"
+                                       accept=".jpg,.jpeg,.png" />
+                                <span asp-validation-for="Photo" class="text-danger"></span>
                             </div>
 
                             <div class="card-body text-center">
@@ -24,10 +33,11 @@
 
                                 <form asp-controller="Members"
                                       asp-action="Edit"
-                                      method="post">
+                                      method="post"
+                                      enctype="multipart/form-data">
 
                                     <input asp-for="Id" type="hidden" />
-                                    <input asp-for="Photo" type="hidden" />
+                                    <input asp-for="CurrentPhoto" type="hidden" />
                                     <input asp-for="Name" type="hidden" />
                                     <input asp-for="DateOfBirth" type="hidden" />
                                     <input asp-for="Gender" type="hidden" />

@@ -1,5 +1,8 @@
 ﻿using GymSystemmanagement.DAL.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+
+[Authorize]
 
 public class TrainersController : Controller
 {

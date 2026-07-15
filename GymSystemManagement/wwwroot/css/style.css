@@ -590,3 +590,10 @@ footer .footer-content .location p {
         border-color: var(--primary-color);
         -webkit-text-fill-color: #fff; /* ensures text stays visible on hover */
     }
+.navbar .nav-link.active {
+    background-color: #0d6efd;
+    color: #fff !important;
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: .3s;
+}
